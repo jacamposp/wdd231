@@ -3,9 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD 231</title>
+    <title>Joel Campos | WDD 231</title>
+    <meta name="description" content="WDD 231 course home page by Joel Campos" />
+    <meta name="author" content="Joel Campos" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
   </head>
   <body>
-    <h1>WDD 231: Web Frontend Development I</h1>
+    <header>
+      <img src="images/home.svg" alt="Joel Campos logo" width="24" height="24" />
+      <span>Joel Campos</span>
+      <button id="ham-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="chamber/index.html">Chamber Project</a></li>
+        <li><a href="project/index.html">Final Project</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Home</h1>
+      <div class="grid">
+        <section class="card">
+          <h2>About Me</h2>
+
+          <div>
+            <p>
+              Hi, I’m Joel Campos, a Front-End Developer from Heredia, Costa Rica, with 7 years of professional
+              experience building web applications. I spent my career at 3M working on a global Product Catalog
+              platform, where I focused on creating fast, accessible, and maintainable user interfaces. My core stack
+              includes React, Next.js, and TypeScript, and I also work on the back end with Node.js, PostgreSQL, and
+              Prisma. I’m taking this course to strengthen my web fundamentals and keep growing as a developer. Outside
+              of code, I enjoy building side projects and learning new technologies.
+            </p>
+          </div>
+        </section>
+        <section class="card">
+          <h2>Student Photo</h2>
+          <img src="images/joel.webp" alt="Photo of Joel Campos" width="300" height="300" loading="lazy" />
+        </section>
+        <section class="card">
+          <h2>Web Certificate Courses</h2>
+          <div class="filters">
+            <button type="button" id="all">All</button>
+            <button type="button" id="cse">CSE</button>
+            <button type="button" id="wdd">WDD</button>
+          </div>
+          <div id="courses"></div>
+          <p>The total credits for courses listed above is <span id="credits">0</span></p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="social">
+        <a href="https://www.facebook.com/joel.campos.739326" target="_blank" rel="noopener"
+          ><img src="images/facebook.svg" alt="facebook icon" width="28" height="28"
+        /></a>
+        <a href="https://github.com/jacamposp" target="_blank" rel="noopener"
+          ><img src="images/github.svg" alt="github icon" width="28" height="28"
+        /></a>
+        <a href="https://www.linkedin.com/in/joelcamposp/" target="_blank" rel="noopener"
+          ><img src="images/linkedin.svg" alt="linkedin icon" width="28" height="28"
+        /></a>
+        <a href="https://twitter.com/joelcamposp" target="_blank" rel="noopener"
+          ><img src="images/twitter.svg" alt="twitter icon" width="28" height="28"
+        /></a>
+      </div>
+      <p>&copy; <span id="currentyear"></span> • Joel Campos • Costa Rica</p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
