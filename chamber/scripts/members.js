@@ -17,7 +17,7 @@ async function getMembersData() {
 
 function displayMembers(members) {
     members.forEach((member) => {
-        const card = document.createElement("article");
+        const card = document.createElement("section");
         card.classList.add("card")
 
         card.innerHTML = `
