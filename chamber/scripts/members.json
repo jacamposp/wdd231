@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Green Mountain Coffee House",
+    "address": "4th Avenue & 7th Street, Heredia, Costa Rica",
+    "phone": "+506 2260-1122",
+    "website": "https://www.greenmountaincoffeecr.com",
+    "image": "green-mountain-coffee.webp",
+    "membershipLevel": 3,
+    "industry": "Food & Beverage",
+    "yearFounded": 2008,
+    "description": "Specialty coffee roaster and café sourcing beans from local Heredia farms."
+  },
+  {
+    "name": "Tico Tech Solutions",
+    "address": "Ultrapark II, Lagunilla, Heredia, Costa Rica",
+    "phone": "+506 2293-4455",
+    "website": "https://www.ticotechsolutions.com",
+    "image": "tico-tech-solutions.webp",
+    "membershipLevel": 3,
+    "industry": "Technology",
+    "yearFounded": 2014,
+    "description": "Software development and IT consulting for small and mid-sized businesses."
+  },
+  {
+    "name": "Oak Tree Hardware",
+    "address": "Main Street, Barva, Heredia, Costa Rica",
+    "phone": "+506 2262-7788",
+    "website": "https://www.oaktreehardware.com",
+    "image": "oak-tree-hardware.webp",
+    "membershipLevel": 2,
+    "industry": "Retail",
+    "yearFounded": 1995,
+    "description": "Family-owned hardware store offering tools, building materials, and home supplies."
+  },
+  {
+    "name": "Bright Smile Dental Clinic",
+    "address": "2nd Avenue & 5th Street, San Pablo, Heredia, Costa Rica",
+    "phone": "+506 2237-3344",
+    "website": "https://www.brightsmilecr.com",
+    "image": "bright-smile-dental.webp",
+    "membershipLevel": 2,
+    "industry": "Healthcare",
+    "yearFounded": 2011,
+    "description": "General and cosmetic dentistry with a focus on family care."
+  },
+  {
+    "name": "Golden Wheat Bakery",
+    "address": "Across from Central Park, Santo Domingo, Heredia, Costa Rica",
+    "phone": "+506 2244-5566",
+    "website": "https://www.goldenwheatbakery.com",
+    "image": "golden-wheat-bakery.webp",
+    "membershipLevel": 1,
+    "industry": "Food & Beverage",
+    "yearFounded": 2002,
+    "description": "Traditional bakery known for fresh bread, pastries, and custom cakes."
+  },
+  {
+    "name": "Green Life Landscaping",
+    "address": "Route 126, San Rafael, Heredia, Costa Rica",
+    "phone": "+506 2263-9900",
+    "website": "https://www.greenlifelandscaping.com",
+    "image": "green-life-landscaping.webp",
+    "membershipLevel": 1,
+    "industry": "Home Services",
+    "yearFounded": 2017,
+    "description": "Residential and commercial landscaping, garden design, and maintenance."
+  },
+  {
+    "name": "Brenes & Associates Accounting",
+    "address": "Heredia Plaza Building, 3rd Floor, Heredia, Costa Rica",
+    "phone": "+506 2261-2233",
+    "website": "https://www.brenesaccounting.com",
+    "image": "brenes-accounting.webp",
+    "membershipLevel": 2,
+    "industry": "Professional Services",
+    "yearFounded": 2005,
+    "description": "Accounting, tax preparation, and payroll services for local businesses."
+  },
+  {
+    "name": "High Forest Lodge",
+    "address": "Monte de la Cruz Road, San Rafael, Heredia, Costa Rica",
+    "phone": "+506 2267-8080",
+    "website": "https://www.highforestlodge.com",
+    "image": "high-forest-lodge.webp",
+    "membershipLevel": 3,
+    "industry": "Hospitality",
+    "yearFounded": 2010,
+    "description": "Mountain lodge with cloud-forest views, a restaurant, and event spaces."
+  }
+]

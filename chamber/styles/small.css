@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #3d405b;
+}
+
+h1 {
+  margin: 1rem 10px;
+  color: #3d405b;
+}
+
+/******************* HEADER ***********************/
+
+body > header {
+  display: grid;
+  grid-template-columns: 24px 1fr 44px;
+  padding: 5px 0 5px 10px;
+  align-items: end;
+  border-bottom: solid 1px #ddd;
+  column-gap: 8px;
+}
+
+body > header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 3px;
+}
+
+body > header span {
+  font-size: 1.2rem;
+  color: #3d405b;
+}
+
+/*************** HAMBURGER NAVIGATION ****************/
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #3d405b;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: '\2630';
+  font-size: 2rem;
+}
+
+.hamburger.show::before {
+  content: '\00D7';
+}
+
+/*************** HAMBURGER NAVIGATION ****************/
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #3d405b;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: '\2630';
+  font-size: 2rem;
+}
+
+.hamburger.show::before {
+  content: '\00D7';
+}
+
+/*************** NAVIGATION  **********************/
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.8rem 10px;
+  color: #3d405b;
+  text-decoration: none;
+  border-bottom: solid 1px #ddd;
+}
+
+.navigation a:hover {
+  background-color: #3d405b;
+  color: #fff;
+}
+
+.navigation li.current a {
+  background-color: #eee;
+  border-left: 4px solid #e07a5f;
+  font-weight: 600;
+}
+/*************** MAIN SECTION ****************/
+
+main {
+  .directory-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .directory-btns button {
+    flex: 1;
+    padding: 0.5rem;
+    font: inherit;
+    font-weight: 600;
+    color: #3d405b;
+    background-color: #fff;
+    border: 2px solid #3d405b;
+    border-radius: 8px;
+    cursor: pointer;
+    max-width: 250px;
+  }
+
+  .directory-btns button:hover,
+  .directory-btns button.active {
+    background-color: #3d405b;
+    color: #fff;
+  }
+
+  #cards {
+    background-color: #fff;
+    padding: 5px;
+  }
+
+  /*************** GRID VIEW ****************/
+
+  #cards.grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    margin: 5px;
+  }
+
+  .card-header {
+    text-align: center;
+    padding: 0.75rem 1rem 0.5rem;
+    border-bottom: 1px solid #999;
+  }
+
+  .card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .card-header p {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: start;
+  }
+
+  .card-body img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid #999;
+  }
+
+  .card-info p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .card-info a {
+    color: #3d405b;
+  }
+
+  /*************** LIST VIEW ****************/
+
+  #cards.list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cards.list .card {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+  }
+
+  #cards.list .card:nth-child(even) {
+    background-color: #ececf1;
+  }
+
+  #cards.list .card-header {
+    text-align: left;
+    border-bottom: none;
+    padding: 0 0 0.25rem;
+  }
+
+  #cards.list .card-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  #cards.list .card-header p {
+    display: none;
+  }
+
+  #cards.list .card-body {
+    display: block;
+    padding: 0;
+  }
+
+  #cards.list .card-body img {
+    display: none;
+  }
+
+  #cards.list .card-info p {
+    margin: 0.2rem 0;
+  }
+
+  #cards.list .card-info strong {
+    display: none;
+  }
+}
+
+/*************** FOOTER ****************/
+
+footer {
+  padding: 10px;
+  background-color: #eee;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+
+  p,
+  a {
+    margin: 2px;
+    color: #3d405b;
+  }
+}
+
+.footer-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+  place-items: center;
+}
+
+.footer-course {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 2px;
+  }
+}

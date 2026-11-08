@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Directory | Chamber of commerce</title>
 
-    <link rel="icon" href="images/favicon.ico" />
-
     <!-- Open Graph (Facebook) -->
     <meta property="og:title" content="Directory | Chamber of Commerce" />
     <meta
@@ -19,6 +17,68 @@
       name="description"
       content="Browse the Chamber of Commerce directory of local member businesses, with contact details, websites, and membership levels. WDD 231 project by Joel Campos." />
     <meta name="author" content="Joel Campos" />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/members.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="images/logo.png" alt="Chamber of commerce Heredia logo" width="24" height="24" />
+      <span>Heredia Chamber of commerce</span>
+      <button id="ham-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="../index.html">Home</a></li>
+        <li><a href="/chamber/directory.html" aria-current="page">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Directory</h1>
+      <div class="directory-btns">
+        <button id="grid-btn" class="active">Grid</button>
+        <button id="list-btn">List</button>
+      </div>
+
+      <div id="cards" class="grid"></div>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <p><strong>Heredia Chamber of Commerce</strong></p>
+        <p>Av 23b, La favorita Sur</p>
+        <p>Heredia, Costa Rica</p>
+        <a href="mailto:info@hcoc.com">info@hcoc.com</a>
+        <a href="tel:+888888888">8888-8888</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/joel.campos.739326" target="_blank" rel="noopener"
+          ><img src="images/facebook.svg" alt="facebook icon" width="28" height="28"
+        /></a>
+        <a href="https://www.linkedin.com/in/joelcamposp/" target="_blank" rel="noopener"
+          ><img src="images/linkedin.svg" alt="linkedin icon" width="28" height="28"
+        /></a>
+        <a href="https://twitter.com/joelcamposp" target="_blank" rel="noopener"
+          ><img src="images/twitter.svg" alt="twitter icon" width="28" height="28"
+        /></a>
+      </div>
+      <div class="footer-course">
+        <p>WDD231 Class Poject</p>
+        <p>Joel Campos</p>
+        <p>&copy; <span id="currentyear"></span> Heredia Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
 </html>
