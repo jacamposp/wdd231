@@ -54,24 +54,6 @@ body > header span {
   content: '\00D7';
 }
 
-/*************** HAMBURGER NAVIGATION ****************/
-
-.hamburger {
-  background: none;
-  border: none;
-  color: #3d405b;
-  cursor: pointer;
-}
-
-.hamburger::before {
-  content: '\2630';
-  font-size: 2rem;
-}
-
-.hamburger.show::before {
-  content: '\00D7';
-}
-
 /*************** NAVIGATION  **********************/
 .navigation {
   display: none;
