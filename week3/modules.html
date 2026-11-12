@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules Example: Course and Sections</title>
+    <link rel="stylesheet" href="styles/modules.css" />
+    <script src="scripts/modules.mjs" type="modules"></script>
+    <style>
+      .f1l1o3bf {
+        font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          'Helvetica Neue',
+          sans-serif,
+          Arial;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .f1l1o3bf button,
+      .f1l1o3bf input,
+      .f1l1o3bf textarea {
+        font-family: inherit;
+      }
+      .f4ofdyf {
+        border: 0.5px solid var(--origin-color-border-base-subdued);
+        border-radius: 8px;
+        cursor: pointer;
+        height: 24px;
+        transition:
+          width 150ms cubic-bezier(0.05, 0.6, 0, 1),
+          height 150ms cubic-bezier(0.05, 0.6, 0, 1),
+          border-radius 150ms cubic-bezier(0.05, 0.6, 0, 1);
+        width: 24px;
+      }
+      .f137tu7e {
+        flex-shrink: 0;
+        transform: scale(1);
+        transition: transform 150ms cubic-bezier(0.05, 0.6, 0, 1);
+      }
+      [data-origin-mode='dark'] .f137tu7e {
+        --origin-color-logo-grammarly-light: var(--origin-color-logo-grammarly-dark);
+        --origin-color-logo-grammarly-primary: var(--origin-color-logo-grammarly-default);
+      }
+      .ftwgcg0 {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        align-items: flex-start;
+        appearance: none;
+        background: transparent;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: flex;
+        font: inherit;
+        height: 32px;
+        justify-content: flex-start;
+        padding: 0;
+        width: 32px;
+      }
+      .ftwgcg0:hover .f4ofdyf {
+        border-radius: 12px;
+        height: 32px;
+        width: 32px;
+      }
+      .ftwgcg0:hover .f137tu7e {
+        transform: scale(1.25);
+      }
+      .f13cnbb7 .f4ofdyf {
+        border-radius: 12px;
+        height: 32px;
+        width: 32px;
+      }
+      .f13cnbb7 .f137tu7e {
+        transform: scale(1.25);
+      }
+      .f8ia88a {
+        --origin-color-button-ghost-content-default: #714cb6;
+        --origin-color-button-ghost-content-states: #533192;
+        --origin-color-button-primary-fill-active: #3f256f;
+        --origin-color-button-primary-fill-default: #714cb6;
+        --origin-color-button-primary-fill-hover: #533192;
+        --origin-font-weight-heading-xsmall: 600;
+      }
+      [data-origin-mode='dark'] .f8ia88a {
+        --origin-color-button-ghost-content-default: #d4c7ff;
+        --origin-color-button-ghost-content-states: #bea1f5;
+        --origin-color-button-primary-content-default: #141413;
+        --origin-color-button-primary-fill-active: #e8e0ff;
+        --origin-color-button-primary-fill-default: #bea1f5;
+        --origin-color-button-primary-fill-hover: #d4c7ff;
+      }
+      .f347vxz {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.1346.0" data-gr-ext-installed="">
+    <main>
+      <h1 id="courseName">Web Frontend Development I</h1>
+      <h2 id="courseCode">WDD231</h2>
+
+      <div id="enrollment">
+        <label for="sectionNumber">Choose a section:</label>
+        <select id="sectionNumber">
+          <option value="0" disabled="" selected="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <button id="enrollStudent">Enroll a Student</button>
+        <button id="dropStudent">Drop a Student</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Enrolled</th>
+            <th>Instructor</th>
+          </tr>
+        </thead>
+        <tbody id="sections">
+          <tr>
+            <td>1</td>
+            <td>88</td>
+            <td>Brother Bingham</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>67</td>
+            <td>Sister Shultz</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>95</td>
+            <td>Sister Smith</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important"
+    ><template shadowrootmode="open"
+      ><style>
+        div.grammarly-desktop-integration {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        div.grammarly-desktop-integration:before {
+          content: attr(data-content);
+        }
+      </style>
+      <div
+        aria-label="grammarly-integration"
+        role="group"
+        tabindex="-1"
+        class="grammarly-desktop-integration"
+        data-content='{"mode":"full","isActive":true,"isUserDisabled":false}'></div></template
+  ></grammarly-desktop-integration>
+</html>
