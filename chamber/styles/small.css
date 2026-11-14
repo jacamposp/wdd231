@@ -1,3 +1,13 @@
+:root {
+  --primary: #3d405b;
+  --accent: #e07a5f;
+  --white: #fff;
+  --light-gray: #eee;
+  --border: #ddd;
+  --stripe: #ececf1;
+  --muted: #999;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,12 +15,11 @@
 body {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
-  color: #3d405b;
+  color: var(--primary);
 }
 
 h1 {
   margin: 1rem 10px;
-  color: #3d405b;
 }
 
 /******************* HEADER ***********************/
@@ -20,7 +29,7 @@ body > header {
   grid-template-columns: 24px 1fr 44px;
   padding: 5px 0 5px 10px;
   align-items: end;
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px var(--border);
   column-gap: 8px;
 }
 
@@ -33,7 +42,6 @@ body > header img {
 
 body > header span {
   font-size: 1.2rem;
-  color: #3d405b;
 }
 
 /*************** HAMBURGER NAVIGATION ****************/
@@ -41,7 +49,7 @@ body > header span {
 .hamburger {
   background: none;
   border: none;
-  color: #3d405b;
+  color: var(--primary);
   cursor: pointer;
 }
 
@@ -73,25 +81,39 @@ body > header span {
 .navigation a {
   display: block;
   padding: 0.8rem 10px;
-  color: #3d405b;
+  color: var(--primary);
   text-decoration: none;
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px var(--border);
 }
 
 .navigation a:hover {
-  background-color: #3d405b;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 .navigation li.current a {
-  background-color: #eee;
-  border-left: 4px solid #e07a5f;
+  background-color: var(--light-gray);
+  border-left: 4px solid var(--accent);
   font-weight: 600;
 }
 
 /*************** MAIN SECTION ****************/
 
 main {
+  a {
+    color: var(--primary);
+  }
+
+  #cards section h2,
+  .home-grid h2 {
+    margin: 1.5rem 10px 0.5rem;
+    font-size: 1.3rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  /*************** DIRECTORY BUTTONS ****************/
+
   .directory-btns {
     display: flex;
     justify-content: center;
@@ -101,36 +123,29 @@ main {
 
   .directory-btns button {
     flex: 1;
+    max-width: 250px;
     padding: 0.5rem;
     font: inherit;
     font-weight: 600;
-    color: #3d405b;
-    background-color: #fff;
-    border: 2px solid #3d405b;
+    color: var(--primary);
+    background-color: var(--white);
+    border: 2px solid var(--primary);
     border-radius: 8px;
     cursor: pointer;
-    max-width: 250px;
   }
 
   .directory-btns button:hover,
   .directory-btns button.active {
-    background-color: #3d405b;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--white);
   }
 
   #cards {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 5px;
   }
 
-  #cards section h2 {
-    margin: 1.5rem 10px 0.5rem;
-    font-size: 1.3rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 2px solid #e07a5f;
-  }
-
-  /*************** GRID VIEW ****************/
+  /*************** CARDS (directory + spotlights) ****************/
 
   #cards.grid .members {
     display: grid;
@@ -139,7 +154,7 @@ main {
   }
 
   .card {
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -149,7 +164,7 @@ main {
   .card-header {
     text-align: center;
     padding: 0.75rem 1rem 0.5rem;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid var(--muted);
   }
 
   .card-header h3 {
@@ -176,17 +191,13 @@ main {
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    border: 1px solid #999;
+    border: 1px solid var(--muted);
   }
 
   .card-info p {
     margin: 0 0 0.5rem;
     font-size: 0.95rem;
     overflow-wrap: anywhere;
-  }
-
-  .card-info a {
-    color: #3d405b;
   }
 
   /*************** LIST VIEW ****************/
@@ -204,7 +215,7 @@ main {
   }
 
   #cards.list .card:nth-child(even) {
-    background-color: #ececf1;
+    background-color: var(--stripe);
   }
 
   #cards.list .card-header {
@@ -218,7 +229,9 @@ main {
     font-weight: 600;
   }
 
-  #cards.list .card-header p {
+  #cards.list .card-header p,
+  #cards.list .card-body img,
+  #cards.list .card-info strong {
     display: none;
   }
 
@@ -227,16 +240,97 @@ main {
     padding: 0;
   }
 
-  #cards.list .card-body img {
-    display: none;
-  }
-
   #cards.list .card-info p {
     margin: 0.2rem 0;
   }
 
-  #cards.list .card-info strong {
-    display: none;
+  /*************** HOME ****************/
+
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .cta {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .cta:hover {
+    background-color: var(--white);
+    color: var(--primary);
+  }
+
+  .home-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0 5px 1rem;
+  }
+
+  .home-grid .card {
+    margin: 0;
+  }
+
+  .events,
+  .weather {
+    padding-bottom: 1rem;
+  }
+
+  .events ul,
+  .weather ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .events li,
+  .weather li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .weather h3 {
+    margin: 1rem 10px 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  #current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 10px;
+  }
+
+  #current-weather p {
+    margin: 0;
+  }
+
+  #current-temp {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  #weather-desc {
+    text-transform: capitalize;
+  }
+
+  .weather li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #spotlight-container {
+    display: grid;
+    gap: 1rem;
   }
 }
 
@@ -244,18 +338,19 @@ main {
 
 footer {
   padding: 10px;
-  background-color: #eee;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--light-gray);
 
   p,
   a {
     margin: 2px;
-    color: #3d405b;
+    color: var(--primary);
   }
+}
+
+.footer-info,
+.footer-course {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-social {
@@ -263,13 +358,4 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 20px auto;
   place-items: center;
-}
-
-.footer-course {
-  display: flex;
-  flex-direction: column;
-
-  p {
-    margin: 2px;
-  }
 }

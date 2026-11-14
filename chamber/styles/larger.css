@@ -1,5 +1,5 @@
 @media only screen and (min-width: 38rem) {
-  header,
+  body > header,
   nav,
   main,
   footer {
@@ -7,7 +7,7 @@
     margin: 10px auto 0 auto;
   }
 
-  header {
+  body > header {
     grid-template-columns: 24px auto;
   }
 
@@ -17,7 +17,7 @@
 
   .navigation {
     display: block;
-    border-bottom: solid 1px #eee;
+    border-bottom: solid 1px var(--light-gray);
   }
 
   .navigation ul {
@@ -30,6 +30,41 @@
 
   .navigation li.current a {
     border-left: none;
-    border-bottom: 3px solid #e07a5f;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  /*************** HOME ****************/
+
+  main {
+    .hero {
+      position: relative;
+    }
+
+    .hero img {
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .cta {
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .home-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem;
+    }
+
+    .spotlights {
+      grid-column: 1 / -1;
+    }
+
+    #spotlight-container {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
   }
 }
