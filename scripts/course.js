@@ -1,3 +1,6 @@
+// ==========================
+// Data
+// ==========================
 const courses = [
     {
         subject: 'CSE',
@@ -6,9 +9,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
+        technology: ['Python'],
         completed: true
     },
     {
@@ -18,10 +19,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
+        technology: ['HTML', 'CSS'],
         completed: true
     },
     {
@@ -31,9 +29,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
+        technology: ['Python'],
         completed: true
     },
     {
@@ -43,9 +39,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
+        technology: ['C#'],
         completed: false
     },
     {
@@ -55,11 +49,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        technology: ['HTML', 'CSS', 'JavaScript'],
         completed: false
     },
     {
@@ -69,58 +59,102 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        technology: ['HTML', 'CSS', 'JavaScript'],
         completed: false
     }
-]
+];
 
-const coursesContainer = document.querySelector("#courses");
-const creditsOutput = document.querySelector("#credits");
+// ==========================
+// DOM references
+// ==========================
+const coursesContainer = document.querySelector('#courses');
+const creditsOutput = document.querySelector('#credits');
+const courseDetails = document.querySelector('#course-details');
 
+const allButton = document.querySelector('#all');
+const cseButton = document.querySelector('#cse');
+const wddButton = document.querySelector('#wdd');
+const filterButtons = [allButton, cseButton, wddButton];
+
+// ==========================
+// Rendering
+// ==========================
 function displayCourses(list) {
-    coursesContainer.innerHTML = "";
+    coursesContainer.innerHTML = '';
 
     list.forEach((course) => {
-        const card = document.createElement("div");
-        card.classList.add("course");
+        const card = document.createElement('button');
+        card.classList.add('course');
 
         if (course.completed) {
-            card.classList.add("completed");
+            card.classList.add('completed');
         }
 
         card.textContent = `${course.subject} ${course.number}`;
+        card.addEventListener('click', () => displayCourseDetails(course));
+
         coursesContainer.appendChild(card);
     });
 
     creditsOutput.textContent = list.reduce((total, course) => total + course.credits, 0);
 }
 
-displayCourses(courses);
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal" aria-label="Close">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
 
-const allButton = document.querySelector("#all");
-const cseButton = document.querySelector("#cse");
-const wddButton = document.querySelector("#wdd");
+    courseDetails.showModal();
 
-function setActive(button) {
-    [allButton, cseButton, wddButton].forEach((btn) => btn.classList.remove("active"));
-    button.classList.add("active");
+    courseDetails.querySelector('#closeModal').addEventListener('click', () => {
+        courseDetails.close();
+    });
 }
 
-allButton.addEventListener("click", () => {
-    displayCourses(courses);
+// ==========================
+// Filters
+// ==========================
+function setActive(button) {
+    filterButtons.forEach((btn) => btn.classList.remove('active'));
+    button.classList.add('active');
+}
+
+function filterBySubject(subject) {
+    return subject ? courses.filter((course) => course.subject === subject) : courses;
+}
+
+// ==========================
+// Event listeners
+// ==========================
+allButton.addEventListener('click', () => {
+    displayCourses(filterBySubject());
     setActive(allButton);
 });
 
-cseButton.addEventListener("click", () => {
-    displayCourses(courses.filter((course) => course.subject === "CSE"));
+cseButton.addEventListener('click', () => {
+    displayCourses(filterBySubject('CSE'));
     setActive(cseButton);
 });
 
-wddButton.addEventListener("click", () => {
-    displayCourses(courses.filter((course) => course.subject === "WDD"));
+wddButton.addEventListener('click', () => {
+    displayCourses(filterBySubject('WDD'));
     setActive(wddButton);
 });
+
+// Close the modal when clicking on the backdrop
+courseDetails.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+// ==========================
+// Init
+// ==========================
+displayCourses(courses);
