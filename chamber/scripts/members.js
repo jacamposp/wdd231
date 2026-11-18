@@ -1,4 +1,4 @@
-const url = "scripts/members.json";
+const url = "data/members.json";
 const membersContainer = document.querySelector("#cards");
 const template = document.querySelector("#card-template");
 

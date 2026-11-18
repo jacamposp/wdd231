@@ -1,4 +1,4 @@
-const spotlightsURL = 'scripts/members.json';
+const spotlightsURL = 'data/members.json';
 const container = document.querySelector('#spotlight-container');
 const levels = { 2: 'Silver', 3: 'Gold' };
 
