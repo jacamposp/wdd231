@@ -27,7 +27,9 @@ function displayMembers(members) {
 
         card.querySelector("h3").textContent = member.name;
         card.querySelector(".industry").textContent = member.industry;
-        card.querySelector("img").alt = `${member.name} logo`;
+        const img = card.querySelector("img");
+        img.src = `images/${member.image}`;
+        img.alt = `${member.name} logo`;
         card.querySelector(".address").textContent = member.address;
         card.querySelector(".phone").textContent = member.phone;
 
