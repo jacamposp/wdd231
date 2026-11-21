@@ -33,9 +33,9 @@
     border-bottom: 3px solid var(--accent);
   }
 
-  /*************** HOME ****************/
-
   main {
+    /*************** HOME ****************/
+
     .hero img {
       max-height: 500px;
       object-fit: cover;
@@ -60,6 +60,13 @@
 
     #spotlight-container {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    /*************** JOIN ****************/
+
+    .join-layout {
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
     }
   }
 }

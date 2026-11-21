@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Heredia Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to join the Heredia Chamber of Commerce." />
+    <meta name="author" content="Yoel Campos" />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.webp" alt="Chamber of commerce Heredia logo" width="24" height="24" />
+      <span>Heredia Chamber of commerce</span>
+      <button id="ham-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Thank You!</h1>
+      <p>We received your application to join the Heredia Chamber of Commerce. We will contact you soon.</p>
+
+      <section class="results">
+        <h2>Your Application</h2>
+        <div id="results"></div>
+      </section>
+
+      <p><a href="index.html">Back to Home</a></p>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <p><strong>Heredia Chamber of Commerce</strong></p>
+        <p>Av 23b, La favorita Sur</p>
+        <p>Heredia, Costa Rica</p>
+        <a href="mailto:info@hcoc.com">info@hcoc.com</a>
+        <a href="tel:+50688888888">8888-8888</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/joel.campos.739326" target="_blank" rel="noopener"
+          ><img src="images/facebook.svg" alt="facebook" width="28" height="28"
+        /></a>
+        <a href="https://www.linkedin.com/in/joelcamposp/" target="_blank" rel="noopener"
+          ><img src="images/linkedin.svg" alt="linkedin" width="28" height="28"
+        /></a>
+        <a href="https://twitter.com/joelcamposp" target="_blank" rel="noopener"
+          ><img src="images/twitter.svg" alt="twitter" width="28" height="28"
+        /></a>
+      </div>
+      <div class="footer-course">
+        <p>WDD231 Class Project</p>
+        <p>Joel Campos</p>
+        <p>&copy; <span id="currentyear"></span> Heredia Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>
