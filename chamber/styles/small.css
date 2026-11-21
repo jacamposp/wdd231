@@ -512,6 +512,7 @@ main {
     margin: 0 10px 1rem;
   }
 
+  .form-section h2,
   .results h2 {
     font-size: 1.3rem;
     padding-bottom: 0.25rem;

@@ -53,150 +53,138 @@
       <h1>Join the Chamber</h1>
 
       <div class="join-layout">
-        <form class="join-form" action="thankyou.html" method="get">
-          <fieldset>
-            <legend>Applicant</legend>
+        <section class="form-section">
+          <h2>Membership Application</h2>
+          <form class="join-form" action="thankyou.html" method="get">
+            <fieldset>
+              <legend>Applicant</legend>
 
-            <label>
-              First Name *
-              <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required />
-            </label>
+              <label>
+                First Name *
+                <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required />
+              </label>
 
-            <label>
-              Last Name *
-              <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required />
-            </label>
+              <label>
+                Last Name *
+                <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required />
+              </label>
 
-            <label>
-              Organizational Title
-              <input
-                type="text"
-                name="title"
-                title="Only letters, hyphens and spaces, minimum 7 characters"
-                autocomplete="organization-title"
-                pattern="[A-Za-z\- ]{7,}" />
-            </label>
+              <label>
+                Organizational Title
+                <input
+                  type="text"
+                  name="title"
+                  title="Only letters, hyphens and spaces, minimum 7 characters"
+                  autocomplete="organization-title"
+                  pattern="[A-Za-z\- ]{7,}" />
+              </label>
 
-            <label>
-              Email *
-              <input
-                type="email"
-                name="email"
-                title="Enter a valid email address"
-                autocomplete="email"
-                placeholder="name@example.com"
-                required />
-            </label>
+              <label>
+                Email *
+                <input
+                  type="email"
+                  name="email"
+                  title="Enter a valid email address"
+                  autocomplete="email"
+                  placeholder="name@example.com"
+                  required />
+              </label>
 
-            <label>
-              Mobile Phone *
-              <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required />
-            </label>
-          </fieldset>
+              <label>
+                Mobile Phone *
+                <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required />
+              </label>
+            </fieldset>
 
-          <fieldset>
-            <legend>Business</legend>
+            <fieldset>
+              <legend>Business</legend>
 
-            <label>
-              Business / Organization Name *
-              <input
-                type="text"
-                name="organization"
-                title="Enter your business or organization name"
-                autocomplete="organization"
-                required />
-            </label>
+              <label>
+                Business / Organization Name *
+                <input
+                  type="text"
+                  name="organization"
+                  title="Enter your business or organization name"
+                  autocomplete="organization"
+                  required />
+              </label>
 
-            <label>
-              Membership Level *
-              <select name="membership" title="Select a membership level" required>
-                <option value="" disabled selected>Select a level</option>
-                <option value="np">NP Membership (non profit, no fee)</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-              </select>
-            </label>
+              <label>
+                Membership Level *
+                <select name="membership" title="Select a membership level" autocomplete="off" required>
+                  <option value="" disabled selected>Select a level</option>
+                  <option value="np">NP Membership (non profit, no fee)</option>
+                  <option value="bronze">Bronze Membership</option>
+                  <option value="silver">Silver Membership</option>
+                  <option value="gold">Gold Membership</option>
+                </select>
+              </label>
 
-            <label>
-              Business Description
-              <textarea name="description" title="Briefly describe your business or organization" rows="4"></textarea>
-            </label>
+              <label>
+                Business Description
+                <textarea
+                  name="description"
+                  title="Briefly describe your business or organization"
+                  rows="4"
+                  autocomplete="off"></textarea>
+              </label>
 
-            <input type="hidden" name="timestamp" id="timestamp" />
-          </fieldset>
+              <input type="hidden" name="timestamp" id="timestamp" />
+            </fieldset>
 
-          <input type="submit" value="Submit Application" class="submit-btn" />
-        </form>
+            <input type="submit" value="Submit Application" class="submit-btn" />
+          </form>
+        </section>
 
-        <section class="membership-cards" aria-label="Membership levels">
-          <article class="membership-card np">
+        <div class="membership-cards">
+          <section class="membership-card np">
             <h2>NP Membership</h2>
             <p>For non profit organizations. No fee.</p>
             <button type="button" class="card-link" data-modal="modal-np">Learn more</button>
-          </article>
-          <article class="membership-card bronze">
+          </section>
+          <section class="membership-card bronze">
             <h2>Bronze Membership</h2>
             <p>$50 / year</p>
             <button type="button" class="card-link" data-modal="modal-bronze">Learn more</button>
-          </article>
-          <article class="membership-card silver">
+          </section>
+          <section class="membership-card silver">
             <h2>Silver Membership</h2>
             <p>$150 / year</p>
             <button type="button" class="card-link" data-modal="modal-silver">Learn more</button>
-          </article>
-          <article class="membership-card gold">
+          </section>
+          <section class="membership-card gold">
             <h2>Gold Membership</h2>
             <p>$300 / year</p>
             <button type="button" class="card-link" data-modal="modal-gold">Learn more</button>
-          </article>
-        </section>
+          </section>
+        </div>
       </div>
 
       <dialog id="modal-np" aria-labelledby="modal-np-title">
         <h2 id="modal-np-title">NP Membership</h2>
         <p><strong>Cost:</strong> Free for non profit organizations</p>
-        <ul>
-          <li>Listing in the member directory</li>
-          <li>Access to monthly networking events</li>
-          <li>Chamber newsletter</li>
-        </ul>
+        <ul class="benefits"></ul>
         <button type="button" class="close-modal">Close</button>
       </dialog>
 
       <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
         <h2 id="modal-bronze-title">Bronze Membership</h2>
         <p><strong>Cost:</strong> $50 / year</p>
-        <ul>
-          <li>All NP benefits</li>
-          <li>Access to basic business training</li>
-          <li>10% discount on chamber events</li>
-        </ul>
+        <ul class="benefits"></ul>
         <button type="button" class="close-modal">Close</button>
       </dialog>
 
       <dialog id="modal-silver" aria-labelledby="modal-silver-title">
         <h2 id="modal-silver-title">Silver Membership</h2>
         <p><strong>Cost:</strong> $150 / year</p>
-        <ul>
-          <li>All Bronze benefits</li>
-          <li>Advanced training workshops</li>
-          <li>Rotating spotlight on the home page</li>
-          <li>20% discount on chamber events</li>
-        </ul>
+        <ul class="benefits"></ul>
         <button type="button" class="close-modal">Close</button>
       </dialog>
 
       <dialog id="modal-gold" aria-labelledby="modal-gold-title">
         <h2 id="modal-gold-title">Gold Membership</h2>
         <p><strong>Cost:</strong> $300 / year</p>
-        <ul>
-          <li>All Silver benefits</li>
-          <li>Priority spotlight position on the home page</li>
-          <li>Invitations to exclusive special events</li>
-          <li>Featured advertising in the newsletter</li>
-          <li>30% discount on chamber events</li>
-        </ul>
+        <ul class="benefits"></ul>
         <button type="button" class="close-modal">Close</button>
       </dialog>
     </main>
