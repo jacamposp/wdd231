@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site plan for Sabor – Tico & World Recipes, a WDD 231 project by Yoel Alberto Campos Porras." />
+    <meta name="author" content="Yoel Alberto Campos Porras" />
+    <title>Sabor Site Plan | WDD 231</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles/site-plan.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sabor – Site Plan</h1>
+      <p>WDD 231 Individual Project &middot; Yoel Alberto Campos Porras</p>
+    </header>
+
+    <main>
+      <section id="site-name">
+        <h2>Site Name</h2>
+        <p class="highlight">Sabor – Tico &amp; World Recipes</p>
+        <ul>
+          <li>
+            "Sabor" means "flavor" in Spanish. It is short, easy to remember, and ties the site to its Costa Rican
+            roots.
+          </li>
+          <li>
+            "Tico &amp; World Recipes" tells visitors right away that the site mixes traditional Costa Rican dishes with
+            international recipes.
+          </li>
+        </ul>
+        <p>Optional domain: <strong>saborrecipes.com</strong></p>
+      </section>
+
+      <section id="site-purpose">
+        <h2>Site Purpose</h2>
+        <p>
+          Sabor is a single place to discover new dishes and keep track of favorites. It shows international recipes
+          from TheMealDB, which visitors can filter by category and open for full ingredients and instructions.
+          Traditional Costa Rican dishes such as gallo pinto, casado, and arroz con leche sit alongside them. Visitors
+          can save favorite recipes in their browser and share their own recipes through a form.
+        </p>
+      </section>
+
+      <section id="scenarios">
+        <h2>Scenarios</h2>
+        <ul>
+          <li>I want to cook something new tonight. What is a good recipe I have never tried?</li>
+          <li>I am vegetarian. Where can I find only vegetarian recipes?</li>
+          <li>How do I make a traditional Costa Rican gallo pinto?</li>
+          <li>I found a recipe I loved last week. How can I find it again quickly?</li>
+          <li>I have a family recipe. How can I share it with other people?</li>
+        </ul>
+      </section>
+
+      <section id="color-scheme">
+        <h2>Color Scheme</h2>
+        <div class="swatches">
+          <figure class="swatch">
+            <div class="color" style="background-color: #1f4d3a"></div>
+            <figcaption>
+              <strong>Forest Green #1F4D3A</strong><br />Header and footer background, headings, and borders.
+            </figcaption>
+          </figure>
+          <figure class="swatch">
+            <div class="color" style="background-color: #a8431f"></div>
+            <figcaption>
+              <strong>Terracotta #A8431F</strong><br />Buttons, links, the favorite icon, and the "recipe of the day"
+              accents.
+            </figcaption>
+          </figure>
+          <figure class="swatch">
+            <div class="color" style="background-color: #e8b04b"></div>
+            <figcaption>
+              <strong>Mustard #E8B04B</strong><br />Active navigation link and highlights on the green background.
+            </figcaption>
+          </figure>
+          <figure class="swatch">
+            <div class="color bordered" style="background-color: #fff8ee"></div>
+            <figcaption><strong>Cream #FFF8EE</strong><br />Main page background and recipe cards.</figcaption>
+          </figure>
+          <figure class="swatch">
+            <div class="color" style="background-color: #2b2b2b"></div>
+            <figcaption><strong>Charcoal #2B2B2B</strong><br />Body text.</figcaption>
+          </figure>
+        </div>
+        <p>
+          Every text and background pair passes WCAG AA contrast. For example, white on Forest Green is 9.63:1, Charcoal
+          on Cream is 13.43:1, and Terracotta on Cream is 5.71:1.
+        </p>
+      </section>
+
+      <section id="typography">
+        <h2>Typography</h2>
+        <div class="font-sample">
+          <h3>Playfair Display</h3>
+          <p class="sample-heading">Gallo Pinto &amp; Casado</p>
+          <p>
+            Used for the site name, page headings, and recipe titles. It is an elegant serif that feels like a cookbook.
+          </p>
+        </div>
+        <div class="font-sample">
+          <h3 class="body-font-title">Nunito</h3>
+          <p class="sample-body">Mix the rice and black beans, then add Salsa Lizano to taste.</p>
+          <p>
+            Used for body text, navigation, ingredient lists, buttons, and forms. It is a rounded sans-serif that stays
+            readable at small sizes.
+          </p>
+        </div>
+      </section>
+
+      <section id="wireframe">
+        <h2>Wireframe</h2>
+        <p>Home page layout for small (mobile) and large (desktop) viewports.</p>
+        <div class="wireframes">
+          <figure>
+            <img
+              src="images/wireframe-small.webp"
+              alt="Mobile wireframe of the Sabor home page: header with logo and hamburger menu, hero image with Explore Recipes button, Recipe of the Day card with View Recipe button, two stacked favorite recipe rows with heart icons, and footer with copyright and last modified date"
+              width="400"
+              height="863"
+              loading="lazy" />
+            <figcaption>Small viewport</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/wireframe-large.webp"
+              alt="Desktop wireframe of the Sabor home page: header with logo and Home, Recipes, and Share a Recipe navigation, full-width hero with Explore Recipes button, Recipe of the Day with image on the left and details on the right, three favorite recipe cards in a row, and footer with copyright and last modified date"
+              width="1200"
+              height="807"
+              loading="lazy" />
+            <figcaption>Large viewport</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Yoel Alberto Campos Porras &middot; WDD 231 &middot; Costa Rica</p>
+    </footer>
+  </body>
+</html>

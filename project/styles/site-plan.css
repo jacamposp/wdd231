@@ -1,0 +1,135 @@
+:root {
+  --green: #1F4D3A;
+  --terracotta: #A8431F;
+  --mustard: #E8B04B;
+  --cream: #FFF8EE;
+  --charcoal: #2B2B2B;
+  --heading-font: "Playfair Display", Georgia, serif;
+  --body-font: "Nunito", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--charcoal);
+  background-color: var(--cream);
+}
+
+header,
+footer {
+  background-color: var(--green);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--heading-font);
+  color: #FFFFFF;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  color: var(--mustard);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--green);
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--green);
+}
+
+.highlight {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--terracotta);
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  margin: 0;
+}
+
+.color {
+  height: 80px;
+  border-radius: 8px;
+}
+
+.bordered {
+  border: 1px solid var(--charcoal);
+}
+
+.font-sample {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-left: 6px solid var(--terracotta);
+}
+
+.body-font-title {
+  font-family: var(--body-font);
+  font-weight: 700;
+}
+
+.sample-heading {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.sample-body {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.wireframes {
+  display: grid;
+  gap: 1rem;
+}
+
+.wireframes figure {
+  margin: 0;
+  text-align: center;
+}
+
+.wireframes img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--charcoal);
+  background-color: #FFFFFF;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .wireframes {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}
